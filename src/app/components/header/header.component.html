@@ -1,0 +1,35 @@
+<h1>Cute Pics</h1>
+
+<div class="search">
+  <label for="search">Search for a breed: </label>
+  <input id="search" type="text" [formControl]="search" (keyup)="handleSearchInput()">
+</div>
+
+<div class="breed-container">
+  <button class="breed-name" *ngFor="let b of searchBreeds" (click)="handleBreedClick({id: b.id, name: b.name})">
+    {{b.name}}
+  </button>
+</div>
+
+<mat-divider></mat-divider>
+
+<button class="block" mat-button (click)="handleShowAll()"> Show All Breeds </button>
+
+<button  *ngIf="breeds" mat-button [matMenuTriggerFor]="menu"> Select Breed </button>
+  <mat-menu  #menu="matMenu">
+    <button *ngFor="let b of breeds" mat-menu-item (click)="handleBreedClick({id: b.id, name: b.name})" >{{b.name}}</button>
+  </mat-menu>
+
+<span *ngIf="chosenBreed"> | Chosen breed: {{chosenBreed.name}}</span>
+
+<button class="block" mat-button [matMenuTriggerFor]="amount"> Get {{limit === 100 ? 'All' : limit}} Pictures </button>
+  <mat-menu #amount="matMenu">
+    <button  mat-menu-item (click)="handleLimitClick(10)" >10</button>
+    <button mat-menu-item (click)="handleLimitClick(20)">20</button>
+    <button mat-menu-item (click)="handleLimitClick(30)">30</button>
+    <button mat-menu-item (click)="handleLimitClick(100)">All (100)</button>
+  </mat-menu>
+
+
+
+

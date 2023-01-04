@@ -1,0 +1,9 @@
+<mat-spinner *ngIf="!cats"></mat-spinner>
+
+<mat-grid-list class="main" *ngIf="cats" cols="5" rowHeight="1:1">
+  <mat-grid-tile  class="tile" *ngFor="let cat of cats">
+    <mat-card class="card" >
+        <img mat-card-image class="cat" src={{cat.url}} alt="cat">
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

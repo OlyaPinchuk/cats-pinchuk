@@ -1,0 +1,39 @@
+* {
+  font-family: "Abyssinica SIL";
+}
+h1 {
+  font-family: "Abyssinica SIL";
+  background-color: cadetblue;
+  color: white;
+  padding-left: 10px;
+}
+
+.block {
+  display: block;
+}
+
+.breed-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.breed-name {
+  background-color: cadetblue;
+  color: white;
+  border: 1px solid lightgray;
+  display: inline;
+  margin: 3px 3px;
+  padding: 1px 3px;
+  border-radius: 5px;
+}
+
+.breed-name:hover {
+  cursor: pointer;
+}
+
+.search {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+

@@ -1,0 +1,27 @@
+h1 {
+  font-family: "Abyssinica SIL";
+}
+
+* {
+  font-family: "Abyssinica SIL";
+
+}
+
+.block {
+  display: block;
+}
+
+.main {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.card {
+  border: 1px solid lightblue;
+}
+
+
+.cat {
+    max-width: 100%;
+    max-height: 100%;
+}
